@@ -1,0 +1,44 @@
+.tool-button {
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--size-5);
+}
+
+.tool-button button {
+  border: 1px solid var(--color-mid-gray);
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tool-button .label {
+  font-size: 10px;
+  font-style: italic;
+}
+
+.tool-button .icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.tool-button .icon.clipboard {
+  background-image: url("/icon-clipboard.svg");
+}
+
+.tool-button .icon.go {
+  background-image: url("/icon-arrow-right.svg");
+}
+
+.tool-button .icon.search {
+  background-image: url("/icon-search.svg");
+}

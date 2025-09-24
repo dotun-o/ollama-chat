@@ -1,0 +1,17 @@
+.row {
+  margin: var(--size-10) 0;
+  display: flex;
+  gap: var(--size-5);
+}
+
+.row.start {
+  justify-content: flex-start;
+}
+
+.row.center {
+  justify-content: center;
+}
+
+.row.end {
+  justify-content: flex-end;
+}

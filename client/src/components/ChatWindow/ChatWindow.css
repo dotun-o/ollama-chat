@@ -1,0 +1,13 @@
+main {
+  margin: auto;
+}
+
+.console {
+  padding: var(--size-20);
+  display: flex;
+  flex-direction: column;
+}
+
+.response-box {
+  overflow-y: scroll;
+}
