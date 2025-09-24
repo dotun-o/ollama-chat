@@ -1,5 +1,6 @@
 main {
   margin: auto;
+  max-width: 800px;
 }
 
 .console {
@@ -8,6 +9,33 @@ main {
   flex-direction: column;
 }
 
+.console .sticky-bottom {
+  position: sticky;
+  bottom: 0;
+}
+
+.clipboard-message {
+  font-size: small;
+  font-style: italic;
+  color: var(--color-dark-gray);
+}
+
 .response-box {
-  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-20);
+}
+
+.response-box span {
+  border-radius: var(--size-10);
+  padding: var(--size-10);
+}
+
+.response-box span.query {
+  background-color: var(--color-light-gray);
+  text-align: right;
+}
+
+.response-box span.response {
+  text-align: left;
 }

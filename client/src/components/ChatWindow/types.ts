@@ -3,12 +3,18 @@ import type { IOllamaModel } from "../../common/types";
 export interface ChatWindowState {
   ollamaModelNames: string[];
   query: string;
-  selectedModelName: string;
+  selectedModel: string;
   isAsking: boolean;
-  responses: string[];
+  chatLog: IChatLog[];
+  clipboardMessage: string;
 }
 
-interface IOllamaModelsListAction {
+export interface IChatLog {
+  type: "query" | "response";
+  content: string
+}
+
+interface IOllamaModelListAction {
   type: "OLLAMA_MODELS";
   data: IOllamaModel[];
 }
@@ -23,14 +29,28 @@ interface ITypeQueryAction {
   data: string;
 }
 
-interface IQueryResponseAction {
-  type: "QUERY_RESPONSE";
-  data: string[];
+interface ILogQueryAction {
+  type: "LOG_QUERY";
+  data: string;
+}
+
+interface ILogResponseAction {
+  type: "LOG_RESPONSE";
+  data: IChatLog[];
+}
+
+interface IErrorAction {
+  type: "ERROR";
+  data: Error;
 }
 
 export type Action = 
-  | IOllamaModelsListAction
+  | IOllamaModelListAction
   | ISelectModelAction
   | ITypeQueryAction
-  | IQueryResponseAction
-  | { type: "ASK" };
+  | ILogQueryAction
+  | ILogResponseAction
+  | IErrorAction
+  | { type: "ASK" }
+  | { type: "COPY_TO_CLIPBOARD" }
+  | { type: "CLEAR_CLIPBOARD_MESSAGE" };

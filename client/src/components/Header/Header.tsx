@@ -1,7 +1,14 @@
+import ollamaChatLogo from "/ollama-chat-logo.svg";
+
+import "./Header.css";
+
 function Header() {
   return (
-    <header>
-      <h1>OLLAMA CHAT CLIENT</h1>
+    <header className="app-header">
+      <h1>
+        <img src={ollamaChatLogo} />
+        <span>OLLAMA CHAT</span>
+      </h1>
     </header>
   );
 }

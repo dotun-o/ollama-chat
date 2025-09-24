@@ -13,7 +13,7 @@ interface ClientResponse {
 }
 
 const headers = {
-  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Origin": process.env.CLIENT_HOST as string,
   "Access-Control-Allow-Methods": "POST, OPTIONS"
 }
 
@@ -30,7 +30,7 @@ export async function handler(event: APIGatewayProxyEvent): Promise<APIGatewayPr
   const result: ClientResponse[] = [];
   
   const ollama = new Ollama({
-    host: process.env.OLLAMA_API_URL,
+    host: process.env.OLLAMA_API_HOST,
     headers: {
       Authorization: `Bearer ${process.env.OLLAMA_API_KEY}`,
     },
@@ -49,6 +49,6 @@ export async function handler(event: APIGatewayProxyEvent): Promise<APIGatewayPr
   return {
     statusCode: 200,
     headers,
-    body: JSON.stringify({ hello: "world" })
+    body: JSON.stringify(response)
   }
 }

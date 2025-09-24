@@ -1,11 +1,12 @@
-import type { Action, ChatWindowState } from "./types";
+import type { Action, ChatWindowState, IChatLog } from "./types";
 
 export const initialState: ChatWindowState = {
   ollamaModelNames: [],
   query: "",
   isAsking: false,
-  selectedModelName: "",
-  responses: []
+  selectedModel: "",
+  chatLog: [],
+  clipboardMessage: "",
 }
 
 export function reducer(state = initialState, action: Action): ChatWindowState {
@@ -19,7 +20,7 @@ export function reducer(state = initialState, action: Action): ChatWindowState {
     case "SELECT_MODEL":
       return {
         ...state,
-        selectedModelName: action.data,
+        selectedModel: action.data,
         isAsking: false
       };
     case "TYPE_QUERY":
@@ -32,10 +33,35 @@ export function reducer(state = initialState, action: Action): ChatWindowState {
         ...state,
         isAsking: true
       };
-    case "QUERY_RESPONSE":
+    case "LOG_QUERY":
       return {
         ...state,
-        responses: [ ...state.responses, ...action.data ]
+        chatLog: [ ...state.chatLog, { type: "query", content: action.data } ]
+      };
+    case "LOG_RESPONSE":
+      return {
+        ...state,
+        query: "",
+        isAsking: false,
+        chatLog: [ ...state.chatLog, ...action.data.map(d => ({ type: "response", content: d.content } as IChatLog)) ]
+      };
+    case "ERROR":
+      return {
+        ...state,
+        isAsking: false
+      };
+    case "COPY_TO_CLIPBOARD":
+      if(navigator && navigator.clipboard) {
+        navigator.clipboard.writeText(state.chatLog.map(l => l.content).join("\n---\n"));
+      }
+      return {
+        ...state,
+        clipboardMessage: "Copied to clipboard!"
+      };
+    case "CLEAR_CLIPBOARD_MESSAGE":
+      return {
+        ...state,
+        clipboardMessage: ""
       };
     default:
       return state;

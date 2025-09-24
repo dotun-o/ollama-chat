@@ -10,15 +10,20 @@ export async function getOllamaModelsList(dispatch: React.Dispatch<Action>) {
   dispatch({ type: "OLLAMA_MODELS", data: ollamaModels.models });
 }
 
-export async function ask(dispatch: React.Dispatch<Action>, query: string) {
+export async function ask(dispatch: React.Dispatch<Action>, query: string, model: string) {
   dispatch({ type: "ASK" });
 
+  const fetchParams = {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ query, model })
+  };
+
   try {
-    const result = await (await fetch(import.meta.env.VITE_QUERY_API_URL)).json();
-    dispatch({ type: "QUERY_RESPONSE", data: result });
+    const result = await (await fetch(import.meta.env.VITE_QUERY_API_URL, fetchParams)).json();
+    dispatch({ type: "LOG_RESPONSE", data: result });
   }
   catch(e) {
-
+    dispatch({ type: "ERROR", data: e as Error });
   }
-  
 }

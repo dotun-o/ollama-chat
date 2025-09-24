@@ -2,6 +2,7 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  box-sizing: border-box;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -22,6 +23,8 @@
   --size-5: 5px;
   --size-10: 10px;
   --size-20: 20px;
+  --size-40: 40px;
+  --size-100: 100px;
 }
 
 a {
@@ -50,7 +53,15 @@ input,
 select,
 textarea {
   border-radius: var(--size-10);
+  padding: var(--size-10);
+  box-sizing: border-box;
   width: 100%;
+  max-width: 100%;
+}
+
+textarea {
+  min-height: var(--size-100);
+  font-size: var(--size-20);
 }
 
 button {
