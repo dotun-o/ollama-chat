@@ -6,7 +6,7 @@ function Header() {
   return (
     <header className="app-header">
       <h1>
-        <img src={ollamaChatLogo} />
+        <img className="app-logo" src={ollamaChatLogo} />
         <span>OLLAMA CHAT</span>
       </h1>
     </header>
