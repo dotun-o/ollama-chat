@@ -1,6 +1,6 @@
 import type { IOllamaModel, Severity } from "../../common/types";
 
-export interface ChatWindowState {
+export interface IChatWindowState {
   ollamaModelNames: string[];
   query: string;
   selectedModel: string;

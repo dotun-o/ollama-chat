@@ -1,6 +1,6 @@
-import type { Action, ChatWindowState } from "./types";
+import type { Action, IChatWindowState } from "./types";
 
-export const initialState: ChatWindowState = {
+export const initialState: IChatWindowState = {
   ollamaModelNames: [],
   query: "",
   isAsking: false,
@@ -10,7 +10,7 @@ export const initialState: ChatWindowState = {
   clipboardMessage: "",
 }
 
-export function reducer(state = initialState, action: Action): ChatWindowState {
+export function reducer(state = initialState, action: Action): IChatWindowState {
   switch(action.type) {
     case "OLLAMA_MODELS":
       return {
