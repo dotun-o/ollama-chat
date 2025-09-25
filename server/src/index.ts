@@ -25,7 +25,7 @@ export async function handler(event: APIGatewayProxyEvent): Promise<APIGatewayPr
       }
     }
 
-    console.log("[OLLAMA_CHAT_API::INFO]", event.body);
+    console.log("[OLLAMA_CHAT_API][INFO]", event.body);
 
     // Allow dev testing
     if(event.headers.Origin === process.env.CLIENT_HOST_DEV) {
@@ -59,7 +59,7 @@ export async function handler(event: APIGatewayProxyEvent): Promise<APIGatewayPr
     }
   }
   catch(e) {
-    console.log("[OLLAMA_CHAT_API::ERROR]", e);
+    console.log("[OLLAMA_CHAT_API][ERROR]", e);
 
     return {
       statusCode: 401,
