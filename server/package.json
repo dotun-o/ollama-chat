@@ -9,8 +9,8 @@
     "prebuild:linux": "rm -rf dist && mkdir dist",
     "prebuild:win": "IF EXIST 'dist' (rmdir /s /q dist) && mkdir dist",
     
-    "build:linux": "esbuild ./src/index.ts --bundle --minify --sourcemap --platform=node --target=es2024 --outfile=dist/index.js",
-    "build:win": "esbuild ./src/index.ts --bundle --minify --sourcemap --platform=node --target=es2024 --outfile=dist/index.js",
+    "build:linux": "esbuild ./src/index.ts --bundle --minify --sourcemap --platform=node --target=es2022 --outfile=dist/index.js",
+    "build:win": "esbuild ./src/index.ts --bundle --minify --sourcemap --platform=node --target=es2022 --outfile=dist/index.js",
     
     "postbuild:linux": "cd dist && zip -r index.zip index.js*",
     "postbuild:win": "cd dist && tar.exe -a -c -f index.zip index.js*",
