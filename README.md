@@ -1,5 +1,4 @@
-# OLLAMA CHAT
-![Ollama Chat logo](https://github.com/dotun-o/ollama-chat/blob/main/client/public/ollama-chat-logo.svg "Ollama Chat logo")
+# ![Ollama Chat logo](https://github.com/dotun-o/ollama-chat/blob/main/client/public/ollama-chat-logo.svg "Ollama Chat logo") OLLAMA CHAT
 
 A client-server application that provides a user-friendly chat interface for the open source Ollama cloud models.
 
