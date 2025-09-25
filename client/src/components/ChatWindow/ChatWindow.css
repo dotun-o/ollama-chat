@@ -3,6 +3,14 @@ main {
   max-width: 800px;
 }
 
+.fixed-top {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+}
+
 .console {
   padding: var(--size-20);
   display: flex;

@@ -13,3 +13,5 @@ export interface IOllamaModel {
     quantization_level: string;
   }
 }
+
+export type Severity = "info" | "success" | "warning" | "error";

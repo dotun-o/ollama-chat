@@ -1,0 +1,48 @@
+.notification-banner {
+  padding: var(--size-10);
+  display: flex;
+  justify-content: center;
+  opacity: 0.5;
+}
+
+.notification-banner .container {
+  width: 80%;
+  max-width: 1280px;
+  display: flex;
+  align-items: center;
+  gap: var(--size-10)
+}
+
+.notification-banner .container .text {
+  flex: 0 0 100%;
+}
+
+.notification-banner .container .close-button {
+  border-radius: var(--size-10);
+  flex: 0 0 var(--size-40);
+  height: var(--size-40);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-white);
+  color: var(--color-dark-gray);
+  cursor: pointer;
+}
+
+.notification-banner.info {
+  background-color: var(--color-info);
+  color: var(--color-white);
+}
+
+.notification-banner.success {
+  background-color: var(--color-success);
+}
+
+.notification-banner.warning {
+  background-color: var(--color-warning);
+}
+
+.notification-banner.error {
+  background-color: var(--color-error);
+  color: var(--color-white);
+}

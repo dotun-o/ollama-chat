@@ -20,7 +20,14 @@ export async function ask(dispatch: React.Dispatch<Action>, query: string, model
   };
 
   try {
-    const result = await (await fetch(import.meta.env.VITE_QUERY_API_URL, fetchParams)).json();
+    const response = await fetch(import.meta.env.VITE_QUERY_API_URL, fetchParams);
+    
+    if(!response.ok) {
+      throw new Error(response.statusText);
+    }
+
+    const result = await response.json();
+    
     dispatch({ type: "LOG_RESPONSE", data: result });
   }
   catch(e) {

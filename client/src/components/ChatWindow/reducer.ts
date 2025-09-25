@@ -1,4 +1,4 @@
-import type { Action, ChatWindowState, IChatLog } from "./types";
+import type { Action, ChatWindowState } from "./types";
 
 export const initialState: ChatWindowState = {
   ollamaModelNames: [],
@@ -6,6 +6,7 @@ export const initialState: ChatWindowState = {
   isAsking: false,
   selectedModel: "",
   chatLog: [],
+  notification: { message: "", severity: "info" },
   clipboardMessage: "",
 }
 
@@ -36,23 +37,53 @@ export function reducer(state = initialState, action: Action): ChatWindowState {
     case "LOG_QUERY":
       return {
         ...state,
-        chatLog: [ ...state.chatLog, { type: "query", content: action.data } ]
+        chatLog: [
+          ...state.chatLog,
+          { type: "query", content: action.data }
+        ]
       };
     case "LOG_RESPONSE":
       return {
         ...state,
         query: "",
         isAsking: false,
-        chatLog: [ ...state.chatLog, ...action.data.map(d => ({ type: "response", content: d.content } as IChatLog)) ]
+        chatLog: [
+          ...state.chatLog,
+          { type: "response", content: action.data.content }
+        ],
+        notification: {
+          message: "",
+          severity: "info"
+        }
       };
     case "ERROR":
       return {
         ...state,
-        isAsking: false
+        isAsking: false,
+        notification: {
+          message: "An error occured. Please try your request again.",
+          severity: "error"
+        }
+      };
+    case "SET_NOTIFICATION":
+      return {
+        ...state,
+        notification: {
+          message: action.data.message,
+          severity: action.data.severity
+        }
+      };
+    case "CLEAR_NOTIFICATION":
+      return {
+        ...state,
+        notification: {
+          message: "",
+          severity: "info"
+        }
       };
     case "COPY_TO_CLIPBOARD":
       if(navigator && navigator.clipboard) {
-        navigator.clipboard.writeText(state.chatLog.map(l => l.content).join("\n---\n"));
+        navigator.clipboard.writeText(state.chatLog.map(l => l.content).join("\n=======>\n"));
       }
       return {
         ...state,

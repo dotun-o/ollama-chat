@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <footer>
-      &copy; {(new Date()).getFullYear()} <a href="https://dotun.me" target="_blank">Dotun</a>
+      &copy; {(new Date()).getFullYear()} Built by <a href="https://dotun.me" target="_blank">Dotun</a>
     </footer>
   );
 }

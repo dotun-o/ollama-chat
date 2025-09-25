@@ -1,4 +1,4 @@
-import ollamaChatLogo from "/ollama-chat-logo.svg";
+import ollamaChatLogo from "../../assets/ollama-chat-logo.svg";
 
 import "./Header.css";
 

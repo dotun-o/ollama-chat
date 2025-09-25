@@ -20,6 +20,10 @@
   --color-light-gray: #f3f3f3;
   --color-mid-gray: #aaaaaa;
   --color-dark-gray: #333333;
+  --color-info: #77ccff;
+  --color-success: #ccff77;
+  --color-warning: #ffcc33;
+  --color-error: #ff7733;
   --size-5: 5px;
   --size-10: 10px;
   --size-20: 20px;
