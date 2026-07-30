@@ -34,16 +34,16 @@ main {
   gap: var(--size-20);
 }
 
-.response-box span {
+.response-box div {
   border-radius: var(--size-10);
-  padding: var(--size-10);
+  padding: var(--size-20);
 }
 
-.response-box span.user {
+.response-box div.user {
   background-color: var(--color-light-gray);
   text-align: right;
 }
 
-.response-box span.assistant {
+.response-box div.assistant {
   text-align: left;
 }

@@ -1,4 +1,6 @@
 import { useCallback, useEffect, useReducer } from "react";
+import Markdown from "markdown-to-jsx";
+
 import { ask, getOllamaModelsList } from "./api";
 import { reducer, initialState } from "./reducer";
 import { ErrorBoundary } from "react-error-boundary";
@@ -69,7 +71,11 @@ function ChatWindow() {
                 />
               </Row>
               <div className="response-box">
-                {state.chatLog.map((r, i) => <span key={i} className={r.role}>{r.content}</span>)}
+                {state.chatLog.map((r, i) => (
+                  r.role === "assistant" ?
+                  <Markdown key={i} className={r.role}>{r.content}</Markdown> :
+                  <div key={i} className={r.role}>{r.content}</div>
+                ))}
               </div>
               <Row alignment="end">
                 <span className="clipboard-message">{state.clipboardMessage}</span>
