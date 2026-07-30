@@ -39,7 +39,7 @@ export function reducer(state = initialState, action: Action): IChatWindowState 
         ...state,
         chatLog: [
           ...state.chatLog,
-          { type: "query", content: action.data }
+          { role: "user", content: action.data }
         ]
       };
     case "LOG_RESPONSE":
@@ -49,7 +49,7 @@ export function reducer(state = initialState, action: Action): IChatWindowState 
         isAsking: false,
         chatLog: [
           ...state.chatLog,
-          { type: "response", content: action.data.content }
+          { role: "assistant", content: action.data.content }
         ],
         notification: {
           message: "",

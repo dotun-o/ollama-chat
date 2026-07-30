@@ -11,7 +11,7 @@ export interface IChatWindowState {
 }
 
 export interface IChatLog {
-  type: "query" | "response";
+  role: "user" | "assistant";
   content: string
 }
 

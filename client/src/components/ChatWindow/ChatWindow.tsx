@@ -17,9 +17,20 @@ function ChatWindow() {
   }, [state.selectedModel, state.query]);
 
   const handleRequest = useCallback(() => {
+    // Since state update is asynchronous,
+    // it cannot be safely read in this same "cycle".
+    // So send request *first* using manually constructed latest chatLog
+    ask(
+      dispatch,
+      JSON.stringify([
+        ...state.chatLog,
+        { role: "user", content: state.query }
+      ]),
+      state.selectedModel
+    );
+
     dispatch({ type: "LOG_QUERY", data: state.query });
     dispatch({ type: "SET_NOTIFICATION", data: { message: "Thinking...", severity: "info" } });
-    ask(dispatch, state.query, state.selectedModel);
   }, [state.selectedModel, state.query]);
 
   const handleCopyToClipboard = useCallback(() => {
@@ -58,7 +69,7 @@ function ChatWindow() {
                 />
               </Row>
               <div className="response-box">
-                {state.chatLog.map((r, i) => <span key={i} className={r.type}>{r.content}</span>)}
+                {state.chatLog.map((r, i) => <span key={i} className={r.role}>{r.content}</span>)}
               </div>
               <Row alignment="end">
                 <span className="clipboard-message">{state.clipboardMessage}</span>

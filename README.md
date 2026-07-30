@@ -7,4 +7,4 @@ A client-server application that provides a user-friendly chat interface for the
 - server: The backend that brokers the client UI and Ollama cloud API
 
 ## LIVE DEMO
-- [View demo](https://dotun.me/public/projects/ollama-chat/index.html)
+- [View demo](https://dotun.me/projects/ollama-chat/index.html)
