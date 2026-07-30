@@ -4,8 +4,8 @@ import { APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda';
 
 dotenv.config();
 
-interface ClientQuery {
-  query: string;
+interface ChatContext {
+  context: string;
   model: string;
 }
 
@@ -32,7 +32,7 @@ export async function handler(event: APIGatewayProxyEvent): Promise<APIGatewayPr
       headers["Access-Control-Allow-Origin"] = process.env.CLIENT_HOST_DEV as string;
     }
 
-    const requestPayload = JSON.parse(event.body) as ClientQuery;
+    const requestPayload = JSON.parse(event.body) as ChatContext;
     let result = "";
     
     const ollama = new Ollama({
@@ -44,7 +44,7 @@ export async function handler(event: APIGatewayProxyEvent): Promise<APIGatewayPr
 
     const ollamaResponse = await ollama.chat({
       model: requestPayload.model,
-      messages: [{ role: "user", content: requestPayload.query }],
+      messages: JSON.parse(requestPayload.context),
       stream: true,
     });
 

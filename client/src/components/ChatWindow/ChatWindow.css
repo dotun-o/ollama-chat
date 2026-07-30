@@ -39,11 +39,11 @@ main {
   padding: var(--size-10);
 }
 
-.response-box span.query {
+.response-box span.user {
   background-color: var(--color-light-gray);
   text-align: right;
 }
 
-.response-box span.response {
+.response-box span.assistant {
   text-align: left;
 }

@@ -10,13 +10,13 @@ export async function getOllamaModelsList(dispatch: React.Dispatch<Action>) {
   dispatch({ type: "OLLAMA_MODELS", data: ollamaModels.models });
 }
 
-export async function ask(dispatch: React.Dispatch<Action>, query: string, model: string) {
+export async function ask(dispatch: React.Dispatch<Action>, context: string, model: string) {
   dispatch({ type: "ASK" });
 
   const fetchParams = {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ query, model })
+    body: JSON.stringify({ context, model })
   };
 
   try {
