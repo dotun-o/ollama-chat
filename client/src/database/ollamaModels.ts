@@ -2,66 +2,66 @@ import type { IOllamaModel } from "../common/types";
 
 export default {
   "models": [
-    {
-      "name": "kimi-k2.6",
-      "model": "kimi-k2.6",
-      "modified_at": "2026-03-31T00:00:00Z",
-      "size": 595148192736,
-      "digest": "4764ecb21f85",
-      "details": {
-        "parent_model": "",
-        "format": "",
-        "family": "",
-        "families": null,
-        "parameter_size": "",
-        "quantization_level": ""
-      }
-    },
-    {
-      "name": "minimax-m2.7",
-      "model": "minimax-m2.7",
-      "modified_at": "2026-03-18T00:00:00Z",
-      "size": 480836588544,
-      "digest": "d1008bea3761",
-      "details": {
-        "parent_model": "",
-        "format": "",
-        "family": "",
-        "families": null,
-        "parameter_size": "",
-        "quantization_level": ""
-      }
-    },
-    {
-      "name": "mistral-large-3:675b",
-      "model": "mistral-large-3:675b",
-      "modified_at": "2025-12-02T00:00:00Z",
-      "size": 682000000000,
-      "digest": "f7e3b2a16d5c",
-      "details": {
-        "parent_model": "",
-        "format": "",
-        "family": "",
-        "families": null,
-        "parameter_size": "",
-        "quantization_level": ""
-      }
-    },
-    {
-      "name": "glm-5.2",
-      "model": "glm-5.2",
-      "modified_at": "2026-06-16T08:00:00-07:00",
-      "size": 0,
-      "digest": "f553240f6dc4",
-      "details": {
-        "parent_model": "",
-        "format": "",
-        "family": "",
-        "families": null,
-        "parameter_size": "",
-        "quantization_level": ""
-      }
-    },
+    // {
+    //   "name": "kimi-k2.6",
+    //   "model": "kimi-k2.6",
+    //   "modified_at": "2026-03-31T00:00:00Z",
+    //   "size": 595148192736,
+    //   "digest": "4764ecb21f85",
+    //   "details": {
+    //     "parent_model": "",
+    //     "format": "",
+    //     "family": "",
+    //     "families": null,
+    //     "parameter_size": "",
+    //     "quantization_level": ""
+    //   }
+    // },
+    // {
+    //   "name": "minimax-m2.7",
+    //   "model": "minimax-m2.7",
+    //   "modified_at": "2026-03-18T00:00:00Z",
+    //   "size": 480836588544,
+    //   "digest": "d1008bea3761",
+    //   "details": {
+    //     "parent_model": "",
+    //     "format": "",
+    //     "family": "",
+    //     "families": null,
+    //     "parameter_size": "",
+    //     "quantization_level": ""
+    //   }
+    // },
+    // {
+    //   "name": "mistral-large-3:675b",
+    //   "model": "mistral-large-3:675b",
+    //   "modified_at": "2025-12-02T00:00:00Z",
+    //   "size": 682000000000,
+    //   "digest": "f7e3b2a16d5c",
+    //   "details": {
+    //     "parent_model": "",
+    //     "format": "",
+    //     "family": "",
+    //     "families": null,
+    //     "parameter_size": "",
+    //     "quantization_level": ""
+    //   }
+    // },
+    // {
+    //   "name": "glm-5.2",
+    //   "model": "glm-5.2",
+    //   "modified_at": "2026-06-16T08:00:00-07:00",
+    //   "size": 0,
+    //   "digest": "f553240f6dc4",
+    //   "details": {
+    //     "parent_model": "",
+    //     "format": "",
+    //     "family": "",
+    //     "families": null,
+    //     "parameter_size": "",
+    //     "quantization_level": ""
+    //   }
+    // },
     {
       "name": "gpt-oss:20b",
       "model": "gpt-oss:20b",
@@ -92,36 +92,36 @@ export default {
         "quantization_level": ""
       }
     },
-    {
-      "name": "kimi-k2.7-code",
-      "model": "kimi-k2.7-code",
-      "modified_at": "2026-06-12T00:00:00Z",
-      "size": 595148192736,
-      "digest": "1a7e88d8c572",
-      "details": {
-        "parent_model": "",
-        "format": "",
-        "family": "",
-        "families": null,
-        "parameter_size": "",
-        "quantization_level": ""
-      }
-    },
-    {
-      "name": "kimi-k3",
-      "model": "kimi-k3",
-      "modified_at": "2026-07-27T08:00:00-07:00",
-      "size": 1560860324864,
-      "digest": "d189309738f0",
-      "details": {
-        "parent_model": "",
-        "format": "",
-        "family": "",
-        "families": null,
-        "parameter_size": "",
-        "quantization_level": ""
-      }
-    },
+    // {
+    //   "name": "kimi-k2.7-code",
+    //   "model": "kimi-k2.7-code",
+    //   "modified_at": "2026-06-12T00:00:00Z",
+    //   "size": 595148192736,
+    //   "digest": "1a7e88d8c572",
+    //   "details": {
+    //     "parent_model": "",
+    //     "format": "",
+    //     "family": "",
+    //     "families": null,
+    //     "parameter_size": "",
+    //     "quantization_level": ""
+    //   }
+    // },
+    // {
+    //   "name": "kimi-k3",
+    //   "model": "kimi-k3",
+    //   "modified_at": "2026-07-27T08:00:00-07:00",
+    //   "size": 1560860324864,
+    //   "digest": "d189309738f0",
+    //   "details": {
+    //     "parent_model": "",
+    //     "format": "",
+    //     "family": "",
+    //     "families": null,
+    //     "parameter_size": "",
+    //     "quantization_level": ""
+    //   }
+    // },
     {
       "name": "gpt-oss:120b",
       "model": "gpt-oss:120b",
@@ -152,81 +152,81 @@ export default {
         "quantization_level": ""
       }
     },
-    {
-      "name": "minimax-m2.5",
-      "model": "minimax-m2.5",
-      "modified_at": "2026-02-12T00:00:00Z",
-      "size": 230000000000,
-      "digest": "1361fbbdd94e",
-      "details": {
-        "parent_model": "",
-        "format": "",
-        "family": "",
-        "families": null,
-        "parameter_size": "",
-        "quantization_level": ""
-      }
-    },
-    {
-      "name": "glm-5.1",
-      "model": "glm-5.1",
-      "modified_at": "2026-04-07T08:00:00-07:00",
-      "size": 1507728316928,
-      "digest": "882e35812821",
-      "details": {
-        "parent_model": "",
-        "format": "",
-        "family": "",
-        "families": null,
-        "parameter_size": "",
-        "quantization_level": ""
-      }
-    },
-    {
-      "name": "kimi-k2.5",
-      "model": "kimi-k2.5",
-      "modified_at": "2026-01-26T00:00:00Z",
-      "size": 1118481408000,
-      "digest": "89c148d8ace8",
-      "details": {
-        "parent_model": "",
-        "format": "",
-        "family": "",
-        "families": null,
-        "parameter_size": "",
-        "quantization_level": ""
-      }
-    },
-    {
-      "name": "deepseek-v4-pro",
-      "model": "deepseek-v4-pro",
-      "modified_at": "2026-04-24T00:00:00Z",
-      "size": 1600000000000,
-      "digest": "079ba36ea28c",
-      "details": {
-        "parent_model": "",
-        "format": "",
-        "family": "",
-        "families": null,
-        "parameter_size": "",
-        "quantization_level": ""
-      }
-    },
-    {
-      "name": "deepseek-v4-flash",
-      "model": "deepseek-v4-flash",
-      "modified_at": "2026-04-24T00:00:00Z",
-      "size": 140000000000,
-      "digest": "ac252c581d64",
-      "details": {
-        "parent_model": "",
-        "format": "",
-        "family": "",
-        "families": null,
-        "parameter_size": "",
-        "quantization_level": ""
-      }
-    },
+    // {
+    //   "name": "minimax-m2.5",
+    //   "model": "minimax-m2.5",
+    //   "modified_at": "2026-02-12T00:00:00Z",
+    //   "size": 230000000000,
+    //   "digest": "1361fbbdd94e",
+    //   "details": {
+    //     "parent_model": "",
+    //     "format": "",
+    //     "family": "",
+    //     "families": null,
+    //     "parameter_size": "",
+    //     "quantization_level": ""
+    //   }
+    // },
+    // {
+    //   "name": "glm-5.1",
+    //   "model": "glm-5.1",
+    //   "modified_at": "2026-04-07T08:00:00-07:00",
+    //   "size": 1507728316928,
+    //   "digest": "882e35812821",
+    //   "details": {
+    //     "parent_model": "",
+    //     "format": "",
+    //     "family": "",
+    //     "families": null,
+    //     "parameter_size": "",
+    //     "quantization_level": ""
+    //   }
+    // },
+    // {
+    //   "name": "kimi-k2.5",
+    //   "model": "kimi-k2.5",
+    //   "modified_at": "2026-01-26T00:00:00Z",
+    //   "size": 1118481408000,
+    //   "digest": "89c148d8ace8",
+    //   "details": {
+    //     "parent_model": "",
+    //     "format": "",
+    //     "family": "",
+    //     "families": null,
+    //     "parameter_size": "",
+    //     "quantization_level": ""
+    //   }
+    // },
+    // {
+    //   "name": "deepseek-v4-pro",
+    //   "model": "deepseek-v4-pro",
+    //   "modified_at": "2026-04-24T00:00:00Z",
+    //   "size": 1600000000000,
+    //   "digest": "079ba36ea28c",
+    //   "details": {
+    //     "parent_model": "",
+    //     "format": "",
+    //     "family": "",
+    //     "families": null,
+    //     "parameter_size": "",
+    //     "quantization_level": ""
+    //   }
+    // },
+    // {
+    //   "name": "deepseek-v4-flash",
+    //   "model": "deepseek-v4-flash",
+    //   "modified_at": "2026-04-24T00:00:00Z",
+    //   "size": 140000000000,
+    //   "digest": "ac252c581d64",
+    //   "details": {
+    //     "parent_model": "",
+    //     "format": "",
+    //     "family": "",
+    //     "families": null,
+    //     "parameter_size": "",
+    //     "quantization_level": ""
+    //   }
+    // },
     {
       "name": "nemotron-3-super",
       "model": "nemotron-3-super",
@@ -272,20 +272,20 @@ export default {
         "quantization_level": ""
       }
     },
-    {
-      "name": "qwen3.5:397b",
-      "model": "qwen3.5:397b",
-      "modified_at": "2026-02-16T00:00:00Z",
-      "size": 397000000000,
-      "digest": "b909ca2f1b7f",
-      "details": {
-        "parent_model": "",
-        "format": "",
-        "family": "",
-        "families": null,
-        "parameter_size": "",
-        "quantization_level": ""
-      }
-    }
+    // {
+    //   "name": "qwen3.5:397b",
+    //   "model": "qwen3.5:397b",
+    //   "modified_at": "2026-02-16T00:00:00Z",
+    //   "size": 397000000000,
+    //   "digest": "b909ca2f1b7f",
+    //   "details": {
+    //     "parent_model": "",
+    //     "format": "",
+    //     "family": "",
+    //     "families": null,
+    //     "parameter_size": "",
+    //     "quantization_level": ""
+    //   }
+    // }
   ]
 } as { models: IOllamaModel[] };
